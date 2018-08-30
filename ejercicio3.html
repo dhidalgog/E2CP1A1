@@ -1,61 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Banderas</title>
+	<title> Flags</title>
 	<style>
-		.españa div {
-		}
-		.box1 {
-			background-color: red;
-			width: 360px;
-			height: 60px;
-		}
-		.box2 {
-			background-color: yellow;
-			width: 360px;
-			height: 120px;
+
+		body {
+			margin: 0;
 		}
 
-		.dinamarca {
+		.flag {
+			width: 360px;
+			height: 240px;
+			border: solid 1px black;
+			margin-bottom: 100px;
+			position: relative;
+		}
+
+		.spain {
+			float: left;
+		}
+
+		.spain .box1 {
+			width: 100%;
+			height: 25%;
+			background-color: red;
+		}
+
+		.spain .box2 {
+			width: 100%;
+			height: 50%;
+			background-color: yellow;
+		}
+
+		.denmark {
 			float: right;
 		}
-		.dinamarca div {
+
+		.denmark .box1 {
 			background-color: red;
+			width: 105px;
+			height: 105px;
+			margin: 0 30px 30px 0;
 			float: left;
-			margin: 0 25px 25px 0;
+
+		}
+		.denmark .box2 {
+			background-color: red;
+			height: 105px;
+			width: 215px;
+			float: right;
 		}
 
-		.box3 {
-			width: 120px;
-			height: 120px;
+
+		.emirates {
+			float: left;
 		}
-		.box4 {
-			width: 240px;
-			height: 120px;
+
+		.emirates .box1 {
+			background-color: red;
+			height: 100%;
+			width: 80px;
 		}
+
+		.emirates .box2 {
+			position: absolute;
+			top: 0;
+			background-color: green;
+			width: 100%;
+			height: 80px;
+			z-index: -1;
+
+		}
+
+		.emirates .box3 {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 80px;
+			z-index: -1;
+			background-color: black;
+		}
+
+
+		.japan {
+			float: right;
+		}
+
+		.dot {
+			position: absolute;
+			top: 75px;
+			left: 135px;
+			background-color: red;
+			height: 90px;
+			width: 90px;
+			border-radius: 50%;
+			display: block;
+		}
+
+
 		.clearfix {
 			clear: both;
 		}
+
+
+
 	</style>
 </head>
-
 <body>
-	<div class="Galeria">
-		<div class="españa">
-			<div class="box1"></div>
-			<div class="box2"></div>
-			<div class="box1"></div>
-		</div>
+	<div class="flag spain">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box1"></div>
+	</div>
 
-		<div class="dinamarca">
-			<div class="box3"></div>
-			<div class="box4"></div>
-			<div class="box3 clearfix"></div>
-			<div class="box4"></div>
-		</div>
-		
-		<div class="emiratos"></div>
-		<div class="japon"></div>
+	<div class="flag denmark">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box1 clearfix"></div>
+		<div class="box2"></div>	
+	</div>
+
+	<p class="clearfix"></p>
+	<div class="flag emirates">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</div>
+	<div class="flag japan">
+		<span class="dot"></span>
 	</div>
 
 </body>
